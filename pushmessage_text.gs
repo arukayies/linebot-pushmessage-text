@@ -1,9 +1,9 @@
 const TOKEN = 'LINEのトークンを指定(取得方法：https://arukayies.com/gas/line_bot/gettoken)';
 const DEBUGID = 'LINEのユーザIDを指定(取得方法：https://arukayies.com/gas/line_bot/get-userid)';
 
-//LINEBOTでボタンテンプレートを設定したメッセージを送るサンプル
+//LINEBOTでテキストメッセージを送るサンプル
 function pushmessage_text() {
-  //ボタンテンプレートを設定したメッセージを送る
+  //テキストメッセージを送る
   UrlFetchApp.fetch('https://api.line.me/v2/bot/message/push', {
     'headers': {
       'Content-Type': 'application/json',
@@ -14,7 +14,7 @@ function pushmessage_text() {
       'to': DEBUGID, //LINEのユーザIDを指定(取得方法：https://arukayies.com/gas/line_bot/get-userid)
       'messages': [{
         'type': 'text',
-        'text': '\uDBC0\uDC84 LINE emoji' //Hello, worldというテキストメッセージを送る
+        'text': '\uDBC0\uDC84 LINE emoji' //テキストメッセージを送る
       }],
       'notificationDisabled': false // trueだとユーザーに通知されない
     }),
